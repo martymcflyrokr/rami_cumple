@@ -1,0 +1,315 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FDF1D7;
+    
+}
+
+/* Estilos para el encabezado */
+.header {
+    background-color: #ffcc99;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para el contenido de la invitación */
+.content {
+    padding: 20px;
+    background-image: url('./assets/imagenes/2659023.jpg');
+    background-repeat: repeat;
+    background-size: contain;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Estilos para las imágenes de dinosaurios */
+.dinosaur-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.dinosaur-images img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para la ubicación del evento */
+.location {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Estilos para el contenedor del mapa */
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Estilos para el botón de confirmar asistencia */
+.confirm-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.confirm-button .btn {
+    padding: 15px 30px;
+    background-color: #ffcc99;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-button .btn:hover {
+    background-color: #ff9966;
+}
+
+/* Estilos para la sección de bienvenida */
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.welcome-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Necesario para el efecto de movimiento */
+    animation: border-animation 1s infinite; /* Animación para el borde */
+}
+
+.welcome-box h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc99;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff9966;
+}
+
+.confirmation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.confirmation-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-box h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+#name {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.confirm-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Animación para el borde */
+@keyframes border-animation {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 204, 153, 0.5); /* Borde inicial */
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 204, 153, 0.9); /* Borde en la mitad */
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 204, 153, 0.5); /* Borde final */
+    }
+}
+
+.bienvenida{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background: #FCE4B4;
+    opacity: 0.95;
+
+}
+
+.texto-bienvenida{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+}
+
+.corazon{
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.fecha-lugar{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.contenedor-lugar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    border-radius: 50px;
+    background-color: #FCE4B4;
+    opacity: 0.95;
+}
+
+.slider-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow-x: scroll;
+  border-radius: 20px;
+}
+
+.slider-container img {
+  flex: 0 0 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 20% 100%;
+}
+
+.slider-container {
+  display: flex;
+  width: 100%;
+  height:100vh;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-container img {
+  flex: 0 0 100%;
+  width: 100%;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+.slider-container img {
+  scroll-snap-align: center;
+}
+
+.nueva-galeria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section{
+    padding-top: 10%;
+}
+
+.te-esperamos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    background-color: whitesmoke;
+    text-align: center;
+    margin-top: 50px;
+    justify-content: center;
+
+
+}
+
+.contenedor-teesperamos{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ubicacion{
+    background-image: url(./assets//imagenes/2659023.jpg);
+    background-position: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: top;
+}
+
+.confirmation-container{
+    background-image: url(./assets/imagenes/2659023.jpg);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Asistencia al Cumpleaños</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="confirmation-box">
+            <h1>¿Asistes al Cumpleaños?</h1>
+            <div class="options">
+                <label for="confirm-yes">
+                    <input type="radio" id="confirm-yes" name="confirmation" value="Sí, confirmo!">
+                    ¡Sí, confirmo!
+                </label>
+                <label for="confirm-no">
+                    <input type="radio" id="confirm-no" name="confirmation" value="No puedo :(">
+                    No puedo :(
+                </label>
+            </div>
+            <input type="text" id="name" placeholder="Ingrese su nombre completo">
+            <button id="confirm-button" class="btn">Confirmar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("jVl4ZVExvX2OfCD0W");
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
