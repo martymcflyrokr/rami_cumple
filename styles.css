@@ -322,3 +322,10 @@ section{
 .confirmation-container{
     background-image: url(./assets/imagenes/2659023.jpg);
 }
+
+.contenedor-desli{
+    text-align: center;
+    background: #039F98;
+    color: white;
+    font-size: small;
+}
