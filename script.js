@@ -15,6 +15,33 @@ document.addEventListener("DOMContentLoaded", function() {
             // Cambiar el texto del botón a "Hecho!" después de hacer clic en él
             confirmButton.textContent = "Hecho!";
 
+            // Inicializa el reproductor de música
+const musicPlayer = document.getElementById('musicPlayer');
+
+// Función para reproducir la música automáticamente al cargar la página
+window.addEventListener('load', function() {
+    musicPlayer.play();
+});
+
+// Opcional: Funciones para controlar el reproductor
+function playMusic() {
+    musicPlayer.play();
+}
+
+function pauseMusic() {
+    musicPlayer.pause();
+}
+
+function stopMusic() {
+    musicPlayer.pause();
+    musicPlayer.currentTime = 0;
+}
+
+// Event Listeners opcionales para controles personalizados
+document.getElementById('playButton').addEventListener('click', playMusic);
+document.getElementById('pauseButton').addEventListener('click', pauseMusic);
+document.getElementById('stopButton').addEventListener('click', stopMusic);
+
             // Redirigir a la página principal después de 2 segundos
             setTimeout(function() {
                 window.location.href = "pagina-principal.html";
