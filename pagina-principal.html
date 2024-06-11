@@ -18,6 +18,16 @@
             <h1>¡Invitación al Primer Añito de Ramiro!</h1>
         </div> -->
     <div class="content">
+      <section class="container-banner">
+        <div class="reproductor">
+          <button id="music-button">Escuchar musica</button>
+            <audio id="background-music" src="./assets/audio/temilla.mp3"></audio>
+        </div>
+        <div class="banner">
+          <img class="img-banner" src="./assets/imagenes_ramiro/7.jpeg" alt="width:100%" srcset="">
+        </div>
+
+      </section>
       <section class="bienvenida">
         <div class="adornos-divisor d-flex justify-content-between"><svg xmlns="http://www.w3.org/2000/svg" width=""
             height="6" viewBox="0 0 206 6" fill=""
@@ -318,9 +328,6 @@
       <section class="nueva-galeria">
 
       </section>
-      <div class="contenedor-desli">
-        <p>>>>>> DESLIZÁ PARA VER MÁS FOTOS >>>>></p>
-      </div>
       <div class="slider-container">
         <img class="slider-item" src="assets/imagenes_ramiro/1.jpeg" />
         <img class="slider-item" src="assets/imagenes_ramiro/2.jpeg" />
@@ -363,6 +370,57 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <script src="script.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const sliderContainer = document.querySelector('.slider-container');
+            const images = document.querySelectorAll('.slider-item');
+            let currentIndex = 0;
+        
+            function showNextImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                sliderContainer.scrollTo({
+                    left: sliderContainer.clientWidth * currentIndex,
+                    behavior: 'smooth'
+                });
+            }
+        
+            setInterval(showNextImage, 3000); // Cambia cada 3 segundos
+        });
+        </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+      const sliderContainer = document.querySelector('.slider-container');
+      const images = document.querySelectorAll('.slider-item');
+      const musicButton = document.getElementById('music-button');
+      const backgroundMusic = document.getElementById('background-music');
+      let currentIndex = 0;
+      let isPlaying = false;
+  
+      function showNextImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          sliderContainer.scrollTo({
+              left: sliderContainer.clientWidth * currentIndex,
+              behavior: 'smooth'
+          });
+      }
+  
+      function toggleMusic() {
+          if (isPlaying) {
+              backgroundMusic.pause();
+              musicButton.textContent = 'Detener Musica';
+          } else {
+              backgroundMusic.play();
+              musicButton.textContent = 'Detener Musica';
+          }
+          isPlaying = !isPlaying;
+      }
+  
+      setInterval(showNextImage, 3000); // Cambia cada 3 segundos
+  
+      musicButton.addEventListener('click', toggleMusic);
+  });
+  </script>
 </body>
 
 </html>
