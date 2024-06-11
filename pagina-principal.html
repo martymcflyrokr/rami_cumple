@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
@@ -20,8 +22,8 @@
     <div class="content">
       <section class="container-banner">
         <div class="reproductor">
-          <button id="music-button">Escuchar musica</button>
-            <audio id="background-music" src="./assets/Music/Sin Bandera - Que me alcance la vida - Un Bebe! (mp3cut.net).mp3"></audio>
+          <button id="music-button"><i class="fas fa-play"></i></button>
+    <audio id="background-music" src="/assets/Music/Sin Bandera - Que me alcance la vida - Un Bebe! (mp3cut.net).mp3"></audio>
         </div>
         <div class="banner">
           <img class="img-banner" src="./assets/imagenes_ramiro/7.jpeg" alt="width:100%" srcset="">
@@ -398,7 +400,7 @@
       const backgroundMusic = document.getElementById('background-music');
       let currentIndex = 0;
       let isPlaying = false;
-  
+
       function showNextImage() {
           currentIndex = (currentIndex + 1) % images.length;
           sliderContainer.scrollTo({
@@ -406,23 +408,33 @@
               behavior: 'smooth'
           });
       }
-  
+
       function toggleMusic() {
           if (isPlaying) {
               backgroundMusic.pause();
-              musicButton.textContent = 'Detener Musica';
+              musicButton.innerHTML = '<i class="fas fa-play"></i>';
           } else {
               backgroundMusic.play();
-              musicButton.textContent = 'Detener Musica';
+              musicButton.innerHTML = '<i class="fas fa-pause"></i>';
           }
           isPlaying = !isPlaying;
       }
-  
+
       setInterval(showNextImage, 3000); // Cambia cada 3 segundos
-  
+
       musicButton.addEventListener('click', toggleMusic);
+
+      // Revisar el parámetro 'music' en la URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const musicParam = urlParams.get('music');
+      if (musicParam === 'true') {
+          backgroundMusic.play();
+          musicButton.innerHTML = '<i class="fas fa-pause"></i>';
+          isPlaying = true;
+      }
   });
-  </script>
+</script>
+
 </body>
 
 </html>
