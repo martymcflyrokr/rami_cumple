@@ -328,7 +328,7 @@ section{
     right: 20px;
     padding: 15px;
     font-size: 24px;
-    background-color: #007BFF;
+    background-color: #F09A28;
     color: white;
     border: none;
     border-radius: 50%;
@@ -340,5 +340,5 @@ section{
   }
   
   #music-button:hover {
-    background-color: #0056b3;
+    background-color: #F09A28;
   }
